@@ -22,12 +22,10 @@ int currentSong = numberOfSongs - numberOfSongs;
 void setup() {
   size(500,400);
   minim = new Minim(this);
-  song1 = minim.loadFile("../Music/Polo G Chosen1 .mp3");
-  song1.play();
-  song2 = minim.loadFile("../Music/PoloG 21.mp3");
-  song2.play();
-  song3 = minim.loadFile("../Music/PoloG EPI.mp3");
-  song3.play();
+  song[currentSong] = minim.loadFile("../Music/Polo G Chosen1 .mp3");
+  song[currentSong+=1] = minim.loadFile("../Music/PoloG 21.mp3");
+  song[currentSong+=1] = minim.loadFile("../Music/PoloG EPI.mp3");
+  
   //
   currentSong = numberOfSongs - numberOfSongs;
   for (int i=currentSong; i<numberOfSongs; i++) {
